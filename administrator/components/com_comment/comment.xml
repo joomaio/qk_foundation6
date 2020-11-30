@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+
+	<name>COM_COMMENT</name>
+	<creationDate>04-07-2019</creationDate>
+	<author>Joomaio inc.</author>
+	<authorEmail>product@joomaio.com</authorEmail>
+	<authorUrl>joomaio.com</authorUrl>
+	<copyright>commercial</copyright>
+	<license>joomaio license</license>
+	<version>0.4</version>
+	<description>COM_COMMENT_DESCRIPTION_TEXT</description>
+	<install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall> <!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<update> <!-- Runs on update; New since J2.5 -->
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+
+	<files folder="site">
+		<filename>comment.php</filename>
+		<filename>controller.php</filename>
+		<folder>views</folder>
+		<folder>models</folder>
+		<folder>controllers</folder>
+	</files>
+
+	<languages folder="site/language">
+		<language tag="en-GB">en-GB/en-GB.com_comment.ini</language>
+	</languages>
+
+	<administration>
+		<!-- Administration Menu Section -->
+		<menu link='index.php?option=com_comment'>COM_COMMENT_MENU</menu>
+		<files folder="admin">
+			<!-- Admin Main File Copy Section -->
+			<filename>comment.php</filename>
+			<filename>controller.php</filename>
+			<filename>config.xml</filename>
+			<!-- SQL files section -->
+			<folder>sql</folder>
+			<!-- tables files section -->
+			<folder>tables</folder>
+			<!-- models files section -->
+			<folder>models</folder>
+			<!-- views files section -->
+			<folder>views</folder>
+			<folder>help</folder>
+			<folder>controllers</folder>
+		</files>
+		<languages folder="admin/language">
+			<language tag="en-GB">en-GB/en-GB.com_comment.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_comment.sys.ini</language>
+		</languages>
+	</administration>
+
+</extension>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+
+	<fieldset
+		name="comment"
+		label="COM_COMMENT_FIELD_CONFIG_INDIVIDUAL_COMMENT_DISPLAY"
+		description="COM_COMMENT_FIELD_CONFIG_INDIVIDUAL_COMMENT_DESC"
+		>
+
+		<field
+			name="autopublish"
+			type="radio"
+			label="COM_COMMENT_AUTO_PUBLISH_COMMENT"
+			description="COM_COMMENT_AUTO_PUBLISH_COMMENT_DESC"
+			class="btn-group btn-group-yesno"
+			default="0"
+			>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field
+			name="guestcomment"
+			type="radio"
+			label="COM_COMMENT_GUEST_COMMENT"
+			description="COM_COMMENT_GUEST_COMMENT_DESC"
+			class="btn-group btn-group-yesno"
+			default="0"
+			>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field
+			name="showinfeatured"
+			type="radio"
+			label="COM_COMMENT_SHOW_IN_FEATURED_LABEL"
+			description="COM_COMMENT_SHOW_IN_FEATURED_DESC"
+			class="btn-group btn-group-yesno"
+			default="0"
+			>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field
+			name="showincategory"
+			type="radio"
+			label="COM_COMMENT_SHOW_IN_CATEGORY_LABEL"
+			description="COM_COMMENT_SHOW_IN_CATEGORY_DESC"
+			class="btn-group btn-group-yesno"
+			default="0"
+			>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+	</fieldset>
+	<fieldset
+		name="permissions"
+		label="JCONFIG_PERMISSIONS_LABEL"
+		description="JCONFIG_PERMISSIONS_DESC"
+		>
+
+		<field
+			name="rules"
+			type="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			filter="rules"
+			validate="rules"
+			component="com_comment"
+			section="component"
+		/>
+
+	</fieldset>
+</config>

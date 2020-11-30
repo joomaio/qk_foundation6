@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+       <field name="content" type="editor"
+            label="COM_COMMENT_CONTENT_COMMENT"
+            description="COM_COMMENT_CONTENT_COMMENT_PLACEHOLDER">
+        </field> 
+        <field name="article_id" type="hidden" filter="unset" /> 
+    </fieldset> 
+</form>

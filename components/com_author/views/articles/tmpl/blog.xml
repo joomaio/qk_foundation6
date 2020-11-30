@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_AUTHOR_ALL_ARTICLE_VIEW_BLOG_TITLE" option="COM_AUTHOR_ALL_ARTICLE_VIEW_BLOG_OPTION">
+		<help key = "JHELP_MENUS_MENU_ITEM_ARTICLE_CATEGORY_BLOG" />
+		<message>
+			<![CDATA[COM_AUTHOR_ALL_ARTICLE_VIEW_BLOG_DESC]]>
+		</message>
+	</layout>
+
+	<!-- Add fields to the request variables for the layout. -->
+	<fields name="request">
+		<fieldset name="request" 
+			addfieldpath="/administrator/components/com_categories/models/fields"
+		>
+			<field
+				name="author_id"
+				type="user"
+				label="COM_AUTHOR_CHOOSE_AN_AUTHOR_LABEL"
+				description="COM_AUTHOR_CHOOSE_AN_AUTHOR_DESC" 
+				required="true"
+			/>
+
+			<field
+				name="catid"
+				type="modal_category"
+				label="JGLOBAL_CHOOSE_CATEGORY_LABEL"
+				description="JGLOBAL_CHOOSE_CATEGORY_DESC"
+				extension="com_content"
+				select="true"
+				new="true"
+				edit="true"
+				clear="true"
+			/>
+
+			<field
+				name="filter_tag"
+				type="tag"
+				label="JTAG"
+				description="JTAG_FIELD_SELECT_DESC"
+				multiple="true"
+			/>
+		</fieldset>
+	</fields>
+
+	<!-- Add fields to the parameters object for the layout. -->
+	<fields name="params">
+		<fieldset name="article" label="COM_AUTHOR_ATTRIBS_FIELDSET_LABEL">		
+			<field
+				name="page_subheading"
+				type="text"
+				label="JGLOBAL_SUBHEADING_LABEL"
+				description="JGLOBAL_SUBHEADING_DESC"
+				size="20"
+			/>
+			<field
+				name="show_pagination"
+				type="list"
+				label="JGLOBAL_PAGINATION_LABEL"
+				description="JGLOBAL_PAGINATION_DESC"
+				useglobal="true"
+				class="chzn-color"
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+				<option value="2">JGLOBAL_AUTO</option>
+			</field>
+
+			<field
+				name="show_pagination_results"
+				type="list"
+				label="JGLOBAL_PAGINATION_RESULTS_LABEL"
+				description="JGLOBAL_PAGINATION_RESULTS_DESC"
+				useglobal="true"
+				class="chzn-color"
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="article_layout" type="componentlayout"
+				label="JGLOBAL_FIELD_LAYOUT_LABEL"
+				description="JGLOBAL_FIELD_LAYOUT_DESC"
+				menuitems="true"
+				extension="com_content"
+				view="article"
+			/>
+
+			<field
+				name="show_title"
+				type="list"
+				label="JGLOBAL_SHOW_TITLE_LABEL"
+				description="JGLOBAL_SHOW_TITLE_DESC"
+				useglobal="true"
+				class="chzn-color"
+				>
+				<option value="use_article">COM_AUTHOR_FIELD_VALUE_USE_ARTICLE_SETTINGS</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="link_titles"
+				type="list"
+				label="JGLOBAL_LINKED_TITLES_LABEL"
+				description="JGLOBAL_LINKED_TITLES_DESC"
+				useglobal="true"
+				class="chzn-color"
+				>
+				<option value="use_article">COM_AUTHOR_FIELD_VALUE_USE_ARTICLE_SETTINGS</option>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="show_intro"
+				type="list"
+				label="JGLOBAL_SHOW_INTRO_LABEL"
+				description="JGLOBAL_SHOW_INTRO_DESC"
+				useglobal="true"
+				class="chzn-color"
+				>
+				<option value="use_article">COM_AUTHOR_FIELD_VALUE_USE_ARTICLE_SETTINGS</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="info_block_position"
+				type="list"
+				label="COM_AUTHOR_FIELD_INFOBLOCK_POSITION_LABEL"
+				description="COM_AUTHOR_FIELD_INFOBLOCK_POSITION_DESC"
+				default=""
+				useglobal="true"
+				class="chzn-color"
+				>
+				<option value="use_article">COM_AUTHOR_FIELD_VALUE_USE_ARTICLE_SETTINGS</option>
+				<option value="0">COM_AUTHOR_FIELD_OPTION_ABOVE</option>
+				<option value="1">COM_AUTHOR_FIELD_OPTION_BELOW</option>
+				<option value="2">COM_AUTHOR_FIELD_OPTION_SPLIT</option>
+			</field>
+
+			<field
+				name="show_category"
+				type="list"
+				label="JGLOBAL_SHOW_CATEGORY_LABEL"
+				description="JGLOBAL_SHOW_CATEGORY_DESC"
+				useglobal="true"
+				class="chzn-color"
+				>
+				<option value="use_article">COM_AUTHOR_FIELD_VALUE_USE_ARTICLE_SETTINGS</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="link_category"
+				type="list"
+				label="JGLOBAL_LINK_CATEGORY_LABEL"
+				description="JGLOBAL_LINK_CATEGORY_DESC"
+				useglobal="true"
+				class="chzn-color"
+				>
+				<option value="use_article">COM_AUTHOR_FIELD_VALUE_USE_ARTICLE_SETTINGS</option>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="show_author"
+				type="list"
+				label="JGLOBAL_SHOW_AUTHOR_LABEL"
+				description="JGLOBAL_SHOW_AUTHOR_DESC"
+				useglobal="true"
+				class="chzn-color"
+				>
+				<option value="use_article">COM_AUTHOR_FIELD_VALUE_USE_ARTICLE_SETTINGS</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="show_publish_date"
+				type="list"
+				label="JGLOBAL_SHOW_PUBLISH_DATE_LABEL"
+				description="JGLOBAL_SHOW_PUBLISH_DATE_DESC"
+				useglobal="true"
+				class="chzn-color"
+				>
+				<option value="use_article">COM_AUTHOR_FIELD_VALUE_USE_ARTICLE_SETTINGS</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="show_item_navigation"
+				type="list"
+				label="JGLOBAL_SHOW_NAVIGATION_LABEL"
+				description="JGLOBAL_SHOW_NAVIGATION_DESC"
+				useglobal="true"
+				class="chzn-color"
+				>
+				<option value="use_article">COM_AUTHOR_FIELD_VALUE_USE_ARTICLE_SETTINGS</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="show_readmore"
+				type="list"
+				label="JGLOBAL_SHOW_READMORE_LABEL"
+				description="JGLOBAL_SHOW_READMORE_DESC"
+				useglobal="true"
+				class="chzn-color"
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="show_readmore_title"
+				type="list"
+				label="JGLOBAL_SHOW_READMORE_TITLE_LABEL"
+				description="JGLOBAL_SHOW_READMORE_TITLE_DESC"
+				useglobal="true"
+				class="chzn-color"
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="show_hits"
+				type="list"
+				label="JGLOBAL_SHOW_HITS_LABEL"
+				description="JGLOBAL_SHOW_HITS_DESC"
+				useglobal="true"
+				class="chzn-color"
+				>
+				<option value="use_article">COM_AUTHOR_FIELD_VALUE_USE_ARTICLE_SETTINGS</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="show_tags"
+				type="list"
+				label="COM_AUTHOR_FIELD_SHOW_TAGS_LABEL"
+				description="COM_AUTHOR_FIELD_SHOW_TAGS_DESC"
+				useglobal="true"
+				class="chzn-color"
+				>
+				<option value="use_article">COM_AUTHOR_FIELD_VALUE_USE_ARTICLE_SETTINGS</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+		</fieldset>
+
+		<fieldset name="integration" label="COM_MENUS_INTEGRATION_FIELDSET_LABEL">
+			<field
+				name="show_feed_link"
+				type="list"
+				label="JGLOBAL_SHOW_FEED_LINK_LABEL"
+				description="JGLOBAL_SHOW_FEED_LINK_DESC"
+				useglobal="true"
+				class="chzn-color"
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="feed_summary"
+				type="list"
+				label="JGLOBAL_FEED_SUMMARY_LABEL"
+				description="JGLOBAL_FEED_SUMMARY_DESC"
+				useglobal="true"
+				>
+				<option value="0">JGLOBAL_INTRO_TEXT</option>
+				<option value="1">JGLOBAL_FULL_TEXT</option>
+			</field>
+		</fieldset>
+	</fields>
+</metadata>

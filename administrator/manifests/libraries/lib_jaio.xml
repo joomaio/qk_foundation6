@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="library" method="upgrade">
+	<name>Library Restframe Work</name>
+	<libraryname>lib_jaio</libraryname>
+	<version>2.0</version>
+	<description>Library Restframe Work</description>
+	<files>
+		<filename>asset.php</filename>
+		<filename>assetJoomla.php</filename>
+		<filename>foundation6.php</filename>
+		<filename>bootstrap4.php</filename>
+		<filename>materialize.php</filename>
+		<filename>purecss.php</filename>
+		<filename>w3css.php</filename>
+		<folder>html</folder>
+	</files>
+	<media folder="media" destination="pkg_jaio">
+		<folder>foundation6</folder>
+		<folder>bootstrap4</folder>
+		<folder>materialize</folder>
+		<folder>purecss</folder>
+		<folder>w3css</folder>
+	</media>
+</extension>

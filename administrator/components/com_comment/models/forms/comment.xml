@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field
+			name="comment"
+			type="editor"
+			label="COM_COMMENT_COMMENT_LABEL"
+			description="COM_COMMENT_COMMENT_DESC"
+			/>
+		<field
+			name="id"
+			type="hidden" 
+			/>
+		<field
+			name="created_at"
+			type="calendar"
+			label="COM_COMMENT_CREATED_AT_LABEL"
+			description="COM_COMMENT_CREATE_AT_DESC"
+			format="%Y-%m-%d %H:%M:%S"
+			showtime="true"
+			/>
+		<field 
+			name="modified" 
+			type="hidden" 
+			translateformat="true"
+			showtime="true"
+			size="22"
+			format="%Y-%m-%d %H:%M:%S"
+		/>
+		<field 
+			name="modified_by" 
+			type="hidden"
+		/>
+	</fieldset>
+</form>

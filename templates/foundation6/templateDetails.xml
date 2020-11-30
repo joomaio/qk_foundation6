@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.8" type="template" method="upgrade">
+	<name>foundation6</name>
+	<title>Template RF Foundation6</title>
+	<creationDate>14-06-2019</creationDate>
+	<author>Joomaio inc.</author>
+	<authorEmail>product@joomaio.com</authorEmail>
+	<authorUrl>joomaio.com</authorUrl>
+	<copyright>(C) 2005 - 2019 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>0.17</version>
+	<description>Joomla template use Foundation6</description>
+	<updateservers>
+		<server type="extension" name="tpl_foundation6" priority="1">http://www.update.joomaio.org/tpl_foundation6/tpl_foundation6_update.xml</server>
+	</updateservers>
+	<files>
+		<filename>index.php</filename>
+		<filename>component.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>templateDetails.xml</filename>
+		<folder>css</folder>
+		<folder>html</folder>
+		<folder>language</folder>
+		<folder>structure</folder>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_foundation6.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_foundation6.sys.ini</language>
+	</languages>
+	<media folder="media" destination="tpl_foundation6">
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>images</folder>
+	</media>
+	<positions>
+		<position>banner</position>
+		<position>search</position>
+		<position>left</position>
+		<position>right</position>
+		<position>top</position>
+		<position>bottom</position>
+		<position>menu1</position>
+		<position>menu2</position>
+		<position>left-sidebar</position>
+		<position>right-sidebar</position>
+		<position>position-0</position>
+		<position>position-1</position>
+		<position>position-2</position>
+		<position>position-3</position>
+		<position>position-4</position>
+		<position>position-5</position>
+		<position>position-6</position>
+		<position>position-7</position>
+		<position>position-8</position>
+		<position>position-9</position>
+		<position>position-10</position>
+		<position>special-1</position>
+		<position>special-2</position>
+		<position>special-3</position>
+		<position>footer</position>
+	</positions>
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+				<field 
+					name="sitename"  
+					type="text" 
+					label="JGLOBAL_TITLE"
+					description="JFIELD_ALT_PAGE_TITLE_LABEL"
+					filter="string" 
+				/>
+				<field 
+					name="logoFile" 
+					type="media" 
+					label="TPL_FOUNDATION6_LOGO_LABEL"
+					description="TPL_FOUNDATION6_LOGO_DESC" 
+					class="" 
+					default=""
+				/>
+				
+				<field 
+					name="selectstructure"
+					type="list"
+					label="TPL_FOUNDATION6_SELECT_TEMPLATE_STYLE_LABEL"
+					description="TPL_FOUNDATION6_SELECT_TEMPLATE_STYLE_DESC"
+					class="listlayout"
+					default="0"
+					>
+					<option value="0">TPL_FOUNDATION6_DEFAULT_LAYOUT</option>
+					<option value="1">TPL_FOUNDATION6_MANUAL_LAYOUT</option>
+					<option value="2">TPL_FOUNDATION6_MULTIPLE_COLUMNS_LAYOUT</option>
+				</field>
+				
+			</fieldset>
+		</fields>
+	</config>
+</extension>

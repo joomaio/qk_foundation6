@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+
+		<field
+			name="search"
+			type="text"
+			label="COM_COMMENT_FILTER_SEARCH_LABEL"
+			description="COM_COMMENT_FILTER_SEARCH_DESC"
+			hint="JSEARCH_FILTER"
+		/>
+
+		<field
+			name="published"
+			type="status"
+			label="JOPTION_SELECT_PUBLISHED"
+			description="JOPTION_SELECT_PUBLISHED_DESC"
+			onchange="this.form.submit();"
+			>
+			<option value="">JOPTION_SELECT_PUBLISHED</option>
+		</field>
+				
+		<field
+			name="article_id"
+			type="article"
+			label="JFIELD_TITLE"
+			description="JFIELD_TITLE_DESC"
+			onchange="this.form.submit();"
+			>
+			<option value="">COM_COMMENT_FILTER_BY_ARTICLE</option>
+		</field>
+	</fields>
+
+	<fields name="list">
+		<field
+			name="fullordering"
+			type="list"
+			label="COM_COMMENT_LIST_FULL_ORDERING"
+			description="COM_COMMENT_LIST_FULL_ORDERING_DESC"
+			onchange="this.form.submit();"
+			default="a.created_at DESC"
+			>
+			<option value="">JGLOBAL_SORT_BY</option>
+			<option value="a.published ASC">COM_COMMENT_LIST_ORDERING_PUBLISHED_ASC</option>
+			<option value="a.published DESC">COM_COMMENT_LIST_ORDERING_PUBLISHED_DESC</option>
+			<option value="a.comment ASC">COM_COMMENT_LIST_ORDERING_COMMENT_ASC</option>
+			<option value="a.comment DESC">COM_COMMENT_LIST_ORDERING_COMMENT_DESC</option>
+			<option value="content_title ASC">COM_COMMENT_LIST_ORDERING_ARTICLE_ASC</option>
+			<option value="content_title DESC">COM_COMMENT_LIST_ORDERING_ARTICLE_DESC</option>
+			<option value="a.created_by ASC">COM_COMMENT_LIST_ORDERING_USER_ASC</option>
+			<option value="a.created_by DESC">COM_COMMENT_LIST_ORDERING_USER_DESC</option>
+			<option value="a.guest_name ASC">COM_COMMENT_LIST_ORDERING_GUEST_NAME_ASC</option>
+			<option value="a.guest_name DESC">COM_COMMENT_LIST_ORDERING_GUEST_NAME_DESC</option>
+			<option value="a.guest_email ASC">COM_COMMENT_LIST_ORDERING_GUEST_EMAIL_ASC</option>
+			<option value="a.guest_email DESC">COM_COMMENT_LIST_ORDERING_GUEST_EMAIL_DESC</option>
+			<option value="a.created_at ASC">COM_COMMENT_LIST_ORDERING_CREATED_AT_ASC</option>
+			<option value="a.created_at DESC">COM_COMMENT_LIST_ORDERING_CREATED_AT_DESC</option>
+			<option value="a.modified_by ASC">COM_COMMENT_LIST_ORDERING_MODIFIED_BY_ASC</option>
+			<option value="a.modified_by DESC">COM_COMMENT_LIST_ORDERING_MODIFIED_BY_DESC</option>
+			<option value="a.modified_at ASC">COM_COMMENT_LIST_ORDERING_MODIFIED_AT_ASC</option>
+			<option value="a.modified_at DESC">COM_COMMENT_LIST_ORDERING_MODIFIED_AT_DESC</option>
+			<option value="a.id ASC">COM_COMMENT_LIST_ORDERING_ID_ASC</option>
+			<option value="a.id DESC">COM_COMMENT_LIST_ORDERING_ID_DESC</option>
+		</field>
+
+		<field
+			name="limit"
+			type="limitbox"
+			label="COM_COMMENT_LIST_LIMIT"
+			description="COM_COMMENT_LIST_LIMIT_DESC"
+			default="25"
+			class="input-mini"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

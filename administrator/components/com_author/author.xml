@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.1" method="upgrade">
+	<name>COM_AUTHOR</name>
+	<author>Joomaio inc.</author>
+	<creationDate>March 2018</creationDate>
+	<copyright>(C) 2005 - 2019 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>product@joomaio.com</authorEmail>
+	<authorUrl>joomaio.com</authorUrl>
+	<version>0.0.10</version>
+	<description>COM_AUTHOR_XML_DESCRIPTION</description>
+
+	<files folder="site">
+		<filename>controller.php</filename>
+		<filename>router.php</filename>
+		<filename>legacyrouter.php</filename>
+		<filename>author.php</filename>
+		<folder>models</folder>
+		<folder>views</folder>
+		<folder>helpers</folder>
+	</files>
+	<languages folder="site">
+		<language tag="en-GB">language/en-GB.com_author.ini</language>
+	</languages>
+	<administration>
+		<menu img="class:banners">com_author</menu>
+		<files folder="admin">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>author.php</filename>
+		</files>
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB.com_author.ini</language>
+			<language tag="en-GB">language/en-GB.com_author.sys.ini</language>
+		</languages>
+	</administration>
+</extension>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fields name="attribs">
+		<fieldset name="plg_comment" label="PLG_COMMENT_FIELDSET_LABEL">
+			
+			<field 
+				name="enablecomment"
+				type="radio"
+				label="PLG_COMMENT_ENABLE_COMMENT_LABEL"
+				description="PLG_COMMENT_ENABLE_COMMENT_DESCRIPTION"
+				class="btn-group btn-group-yesno"
+				default="0"
+				>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+		</fieldset>
+	</fields>
+</form>
